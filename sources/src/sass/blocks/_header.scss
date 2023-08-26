@@ -1,0 +1,147 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  background-color: #090807;
+
+  &.scrolled {
+    box-shadow: 0 2px 8px 4px rgba(9, 8, 7, 0.2);
+  }
+}
+
+.header__container {
+  width: 100%;
+  max-width: 1440px;
+  min-width: 320px;
+  margin: 0 auto;
+  padding: 10px 40px 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include md {
+    max-width: 1220px;
+  }
+}
+
+.header__logo {
+  width: 127px;
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+}
+
+.header__menu {
+  display: flex;
+  align-items: center;
+  gap: 0 24px;
+
+  @include r(1199px) {
+    display: none;
+  }
+}
+
+.header__nav {
+  display: flex;
+  align-items: center;
+
+  ul {
+    display: flex;
+    align-items: center;
+    gap: 0 24px;
+  }
+
+  li {
+    color: var(--color_white, #fff);
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 32px;
+    text-transform: uppercase;
+    transition: color 0.2s ease-out;
+
+    &:hover {
+      color: var(--color_red, #fa4132);
+    }
+  }
+}
+
+.header__burger {
+  display: none;
+  position: relative;
+  width: 44px;
+  height: 28px;
+  cursor: pointer;
+
+  span {
+    position: absolute;
+    right: 0;
+    top: 12px;
+    width: 32px;
+    height: 4px;
+    background-color: #fff;
+    transition: all 0.2s ease-out;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 4px;
+    background-color: #fff;
+    transition: all 0.2s ease-out;
+    transform-origin: right center;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #fff;
+    transition: all 0.2s ease-out;
+    transform-origin: right center;
+  }
+
+  &:hover {
+    span {
+      width: 100%;
+    }
+
+    &::before {
+      width: 100%;
+    }
+  }
+
+  &.active {
+    span {
+      opacity: 0;
+    }
+
+    &::before,
+    &::after {
+      width: 100%;
+    }
+
+    &::before {
+      transform: rotate(-45deg) translateY(-5px);
+    }
+
+    &::after {
+      transform: rotate(45deg) translateY(5px);
+    }
+  }
+
+  @include r(1199px) {
+    display: block;
+  }
+}
