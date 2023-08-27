@@ -4,7 +4,7 @@
   left: 0;
   z-index: 10;
   width: 100%;
-  min-height: 74px;
+  min-height: 75px;
   background-color: #090807;
 
   @include r(1199px) {
@@ -32,7 +32,7 @@
   max-width: 1440px;
   min-width: 320px;
   margin: 0 auto;
-  padding: 10px 40px 14px;
+  padding: 11px 40px 14px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -100,7 +100,7 @@
   ul {
     display: flex;
     align-items: center;
-    gap: 0 24px;
+    gap: 0 25px;
   }
 
   li {

@@ -1,0 +1,211 @@
+.intro {
+  width: 100%;
+  min-width: 320px;
+  overflow: hidden;
+  background-color: #000;
+  background: center / cover no-repeat;
+  background-image: url("../images/intro/intro-bg.png");
+  background-image: image-set(
+    "../images/intro/intro-bg.png" type("image/webp"),
+    "../images/intro/intro-bg.webp" type("image/png")
+  );
+
+  @include md {
+    background-image: url("../images/intro/intro-bg-1280.png");
+    background-image: image-set(
+      "../images/intro/intro-bg-1280.png" type("image/webp"),
+      "../images/intro/intro-bg-1280.webp" type("image/png")
+    );
+  }
+
+  @include xxs {
+    background-image: url("../images/intro/intro-bg-400.png");
+    background-image: image-set(
+      "../images/intro/intro-bg-400.png" type("image/webp"),
+      "../images/intro/intro-bg-400.webp" type("image/png")
+    );
+  }
+}
+
+.intro__title {
+  font-size: 0;
+  line-height: 0;
+}
+
+.intro__container {
+  width: 100%;
+  max-width: 1380px;
+  margin: 0 auto;
+  padding: 75px 40px 0;
+  display: grid;
+  grid-template-columns: 1fr 1px 459px 1px 1fr;
+  grid-template-areas:
+    "inspiring line_first excellence line_second ."
+    "about line_first . line_second scrolldown";
+
+  @include md {
+    grid-template-columns: 1fr 1px 405px 1px 1fr;
+    padding: 75px 70px 0;
+  }
+
+  @include r(1199px) {
+    grid-template-columns: 1fr 1px 1fr 1px 1fr;
+    padding: 72px 40px 0;
+  }
+
+  @include sm {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "inspiring"
+      "excellence"
+      "about"
+      "scrolldown";
+    padding: 72px 40px 106px;
+  }
+
+  @include xs {
+    padding: 72px 20px 106px;
+  }
+}
+
+.intro__inspiring {
+  position: relative;
+  grid-area: inspiring;
+  padding: 119px 20px 74px 0;
+  color: var(--color_white, #fff);
+  font-size: 52px;
+  font-weight: 500;
+  line-height: 140%;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    transform: translateX(-50%);
+    width: 200vw;
+    height: 1px;
+    background-color: #fff;
+  }
+
+  @include r(1199px) {
+    font-size: 48px;
+    padding: 119px 15px 74px 0;
+  }
+
+  @include sm {
+    max-width: 360px;
+    padding: 101px 15px 20px 0;
+    font-size: 44px;
+
+    &::after {
+      background: linear-gradient(90deg, #fff 0%, rgba(255, 255, 255, 0) 100%);
+    }
+  }
+}
+
+.intro__excellence {
+  grid-area: excellence;
+  padding: 119px 20px 74px 40px;
+  color: var(--color_red, #fa4132);
+  font-size: 52px;
+  font-weight: 500;
+  line-height: 140%;
+
+  @include r(1199px) {
+    font-size: 48px;
+    padding: 119px 15px 74px;
+  }
+
+  @include sm {
+    max-width: 360px;
+    padding: 22px 15px 0 0;
+    font-size: 44px;
+  }
+}
+
+.intro__about {
+  grid-area: about;
+  padding: 60px 20px 87px 0;
+  color: var(--color_white, #fff);
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 32px;
+
+  @include r(1199px) {
+    font-size: 22px;
+    padding: 60px 15px 87px 0;
+  }
+
+  @include sm {
+    max-width: 480px;
+    padding: 19px 0;
+    font-size: 20px;
+    line-height: 28px;
+  }
+}
+
+.intro__scrolldown {
+  grid-area: scrolldown;
+
+  padding-top: 188px;
+  padding-left: 39px;
+
+  span {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 17px;
+
+    color: var(--color_white, #fff);
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 32px;
+    text-transform: uppercase;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 4px;
+      height: 6px;
+      background-color: #fff;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 1px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 2px;
+      height: 20px;
+      background-color: rgba(255, 255, 255, 0.4);
+    }
+  }
+
+  @include sm {
+    padding-top: 62px;
+    padding-left: 0;
+  }
+}
+
+.intro__line-first {
+  grid-area: line_first;
+  background: linear-gradient(0, #fff 0%, rgba(255, 255, 255, 0) 100%);
+
+  @include sm {
+    display: none;
+  }
+}
+
+.intro__line-second {
+  grid-area: line_second;
+  background: linear-gradient(0, #fff 0%, rgba(255, 255, 255, 0) 100%);
+
+  @include sm {
+    display: none;
+  }
+}
