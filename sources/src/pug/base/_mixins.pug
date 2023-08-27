@@ -38,19 +38,39 @@ mixin pagination(amount, current, ellipsis, last, arrows)
 
         ul.pagination__list
             - for (var index = 1; index <= amount; index++)
-                    if (index === current)
-                        li.pagination__item.current
-                            span= index
-                    else if (index === ellipsis)
-                        li.pagination__item
-                            a(href="#").is-collapsed ...
-                    else
-                        li.pagination__item
-                            a(href="#")= index
-
-            - for (var index = last; index <= last; index++)
+                if (index === current)
+                    li.pagination__item.current
+                        span= index
+                else if (index === ellipsis)
+                    li.pagination__item
+                        a(href="#").is-collapsed ...
+                else
                     li.pagination__item
                         a(href="#")= index
 
+            - for (var index = last; index <= last; index++)
+                li.pagination__item
+                    a(href="#")= index
+
         if (arrows === true)
             a(href="#").pagination__next: span
+
+mixin button(linkOrButton, uniqueClass, colorClass, value)
+    //- linkOrButton may have one of the next values: link, button
+
+    //- uniqueClass - any className for element
+
+    //- colorClass may have one of the next values:
+    //- .btn-red, .btn-white, .btn-black
+
+    if linkOrButton === 'button'
+        button(class=uniqueClass + ' btn ' + colorClass)
+            span= value
+            svg(width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg")
+                path(d="M15.2847 0.857865L4.13116 3.84645L12.2961 12.0114L15.2847 0.857865ZM1.84968 15.7071L9.62786 7.92893L8.21365 6.51472L0.435471 14.2929L1.84968 15.7071Z" fill="white")
+
+    else
+        a(href="#").header__get-in-touch.btn.btn-red
+            span= value
+            svg(width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg")
+                path(d="M15.2847 0.857865L4.13116 3.84645L12.2961 12.0114L15.2847 0.857865ZM1.84968 15.7071L9.62786 7.92893L8.21365 6.51472L0.435471 14.2929L1.84968 15.7071Z" fill="white")

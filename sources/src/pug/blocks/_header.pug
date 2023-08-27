@@ -17,10 +17,11 @@ header.header
                     li: a(href="#") RESOURCES
 
             .header__buttons
-                button.header__get-in-touch.btn.btn-red
-                    span Get in Touch
-                    svg(width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg")
-                        path(d="M15.2847 0.857865L4.13116 3.84645L12.2961 12.0114L15.2847 0.857865ZM1.84968 15.7071L9.62786 7.92893L8.21365 6.51472L0.435471 14.2929L1.84968 15.7071Z" fill="white")
+
+                +button('button', 'header__get-in-touch', 'btn-red', 'Get in Touch')
+                +button('button', 'header__become-a-member', 'btn-red', 'Become a member')
+                +button('button', 'header__become-a-patron', 'btn-white', 'Become a Patron')
+                +button('button', 'header__contact-us', 'btn-white', 'Contact Us')
 
         .header__burger
             span

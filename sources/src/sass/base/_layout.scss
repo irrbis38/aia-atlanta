@@ -8,7 +8,9 @@
 //@import "../libs/LIB_NAME/path/to/style.scss"
 
 /*===== global styles =====*/
-* {
+*,
+::before,
+::after {
   box-sizing: border-box;
 }
 // min-height: 0.001vw; // — Fixes Safari bug with viewport units in calc()
@@ -20,7 +22,6 @@ body {
   display: flex;
   flex-direction: column;
   color: #000;
-  // background: var(--color_dark_bg);
   font-family: var(--main_font);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -36,22 +37,6 @@ body.lock {
   min-width: 320px;
   margin: 0 auto;
   padding: 0 150px;
-
-  // @include r(1700px) {
-  //   padding: 0 80px;
-  // }
-
-  // @include lg {
-  //   padding: 0 60px;
-  // }
-
-  // @include md {
-  //   padding: 0 40px;
-  // }
-
-  // @include xxs {
-  //   padding: 0 15px;
-  // }
 }
 
 a {
@@ -100,7 +85,10 @@ input {
   outline-offset: 0;
 }
 
+// links or buttons
+
 .btn {
+  width: max-content;
   display: flex;
   align-items: center;
   gap: 0 24px;
@@ -126,6 +114,11 @@ input {
     svg {
       transform: rotate(45deg);
     }
+  }
+
+  @include r(1199px) {
+    padding: 10px 24px 10px 24px;
+    font-size: 16px;
   }
 }
 
