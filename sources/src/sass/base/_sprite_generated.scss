@@ -6,13 +6,13 @@
 
 .svg-image-arrow-left {
 	@extend %svg-common;
-	background-position: 100% 0;
-	background-size: math.div(851, 34)*100% auto;
+	background-position: 0 0;
+	background-size: math.div(34, 34)*100% auto;
 	width: 34px;
 
 }
 @mixin svg-pos-image-arrow-left {
-	background-position: 100% 0;
+	background-position: 0 0;
 }
 @mixin svg-image-arrow-left-hover {
 	.svg-image-arrow-left {
@@ -35,13 +35,13 @@
 
 .svg-image-arrow-right {
 	@extend %svg-common;
-	background-position: 100% 1.6298020954598371%;
-	background-size: math.div(851, 34)*100% auto;
+	background-position: 0 100%;
+	background-size: math.div(34, 34)*100% auto;
 	width: 34px;
 
 }
 @mixin svg-pos-image-arrow-right {
-	background-position: 100% 1.6298020954598371%;
+	background-position: 0 100%;
 }
 @mixin svg-image-arrow-right-hover {
 	.svg-image-arrow-right {
@@ -60,35 +60,6 @@
 .svg-image-arrow-right-dims {
 	width: 34px;
 	height: 14px;
-}
-
-.svg-image-upcoming-events-picture {
-	@extend %svg-common;
-	background-position: 0 0;
-	background-size: math.div(851, 817)*100% auto;
-	width: 817px;
-
-}
-@mixin svg-pos-image-upcoming-events-picture {
-	background-position: 0 0;
-}
-@mixin svg-image-upcoming-events-picture-hover {
-	.svg-image-upcoming-events-picture {
-		@include svg-pos-image-upcoming-events-picture-hover
-	}
-}
-
-.svg-image-upcoming-events-picture:before {
-	content:"";
-	display:block;
-	font-size:0;
-	line-height:0;
-	padding-top: math.div(873, 817)*100%;
-}
-
-.svg-image-upcoming-events-picture-dims {
-	width: 817px;
-	height: 873px;
 }
 
 
