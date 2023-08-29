@@ -87,6 +87,10 @@ input {
   background-color: transparent;
 }
 
+button {
+  cursor: pointer;
+}
+
 :active,
 :hover,
 :focus {
@@ -183,4 +187,24 @@ input {
       fill: var(--color_black, #000);
     }
   }
+}
+
+.block__title {
+  font-size: 52px;
+  font-weight: 500;
+  line-height: 140%;
+
+  @include xs {
+    font-size: 44px;
+  }
+
+  @include xxs {
+    max-width: 100%;
+  }
+}
+
+.block__subtitle {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 28px;
 }

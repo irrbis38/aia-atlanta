@@ -22,36 +22,52 @@ block page
 
             .intro__line-second
 
-    section.upcoming-events
-        .upcoming-events__decor
+    section.upcomingEvents
+        .upcomingEvents__decor
             +icon('upcoming-events-picture')
 
-        .container
+        .upcomingEvents__container
 
-            .upcoming-events__info
+            .upcomingEvents__info
 
-                h2.upcoming-events__title Upcoming Events
+                h2.upcomingEvents__title.block__title Upcoming Events
 
-                p.upcoming-events__subtitle Elevate your career and connections with continuing education, networking, and advocacy events.
+                p.upcomingEvents__subtitle.block__subtitle Elevate your career and connections with continuing education, networking, and advocacy events.
 
-            .upcoming-events__slider
+            .upcomingEvents__slider
 
-                .upcoming-events__wrapper
-
-                    include ./blocks/_upcoming-events-slide
+                .upcomingEvents__wrapper
 
                     include ./blocks/_upcoming-events-slide
 
                     include ./blocks/_upcoming-events-slide
 
-                .upcoming-events__nav(aria-label="slider navigation")
+                    include ./blocks/_upcoming-events-slide
 
-                    button.upcoming-events__btn.upcoming-events__prev(aria-label="show previous slide")
-                        +icon('arrow-left')
+                +slider__navigation('upcomingEvents__nav')
 
-                    button.upcoming-events__btn.upcoming-events__next(aria-label="show next slide")
-                        +icon('arrow-right')
 
+    section.memberSpotlights
+
+        .memberSpotlights__container
+
+            .memberSpotlights__info
+
+                h2.memberSpotlights__title.block__title Member Spotlights
+
+                p.memberSpotlights__subtitle.block__subtitle Recognizing emerging and established talent in the architecture profession.
+
+            .memberSpotlights__slider 
+
+                .memberSpotlights__decor 
+
+                .memberSpotlights__pictures 
+
+                .memberSpotlights__wrapper 
+
+                .memberSpotlights__descr
+
+                +slider__navigation('memberSpotlights__nav')
 
 
 

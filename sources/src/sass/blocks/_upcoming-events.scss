@@ -1,4 +1,4 @@
-.upcoming-events {
+.upcomingEvents {
   position: relative;
   padding-top: 160px;
   margin-bottom: 158px;
@@ -19,14 +19,30 @@
 
   @include xxs {
     padding-top: 40px;
-
-    .container {
-      padding: 0;
-    }
   }
 }
 
-.upcoming-events__decor {
+.upcomingEvents__container {
+  width: 100%;
+  max-width: 1440px;
+  min-width: 320px;
+  margin: 0 auto;
+  padding: 0 70px;
+
+  @include md {
+    padding: 0 40px;
+  }
+
+  @include sm {
+    padding: 0 20px;
+  }
+
+  @include xxs {
+    padding: 0;
+  }
+}
+
+.upcomingEvents__decor {
   position: absolute;
   top: -62px;
   left: -35px;
@@ -52,7 +68,7 @@
   }
 }
 
-.upcoming-events__info {
+.upcomingEvents__info {
   display: flex;
   align-items: flex-end;
   gap: 0 30px;
@@ -74,11 +90,8 @@
   }
 }
 
-.upcoming-events__title {
+.upcomingEvents__title {
   max-width: 378px;
-  font-size: 52px;
-  font-weight: 500;
-  line-height: 140%;
 
   @include lg {
     max-width: 325px;
@@ -86,28 +99,20 @@
 
   @include xs {
     margin-bottom: 20px;
-    font-size: 44px;
-  }
-
-  @include xxs {
-    max-width: 100%;
   }
 }
 
-.upcoming-events__subtitle {
+.upcomingEvents__subtitle {
   max-width: 358px;
   color: var(--text-body, rgba(0, 0, 0, 0.72));
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 28px;
 }
 
-.upcoming-events__slider {
+.upcomingEvents__slider {
   position: relative;
   padding-top: 40px;
 }
 
-.upcoming-events__wrapper {
+.upcomingEvents__wrapper {
   position: relative;
   display: grid;
   grid-template-columns: 1fr;
@@ -115,7 +120,7 @@
   padding-bottom: 39px;
 }
 
-.upcoming-events__slide {
+.upcomingEvents__slide {
   position: relative;
   grid-row-start: 1;
   grid-row-end: 2;
@@ -201,7 +206,7 @@
   }
 }
 
-.upcoming-events__picture {
+.upcomingEvents__picture {
   position: absolute;
   width: 520px;
   height: 540px;
@@ -247,7 +252,7 @@
   }
 }
 
-.upcoming-events__descr {
+.upcomingEvents__descr {
   padding-bottom: 205px;
   color: var(--color_white, #fff);
 
@@ -266,8 +271,8 @@
   }
 }
 
-.upcoming-events__date,
-.upcoming-events__time {
+.upcomingEvents__date,
+.upcomingEvents__time {
   display: block;
   font-size: 14px;
   font-weight: 800;
@@ -275,11 +280,11 @@
   text-transform: uppercase;
 }
 
-.upcoming-events__time {
+.upcomingEvents__time {
   margin-bottom: 11px;
 }
 
-.upcoming-events__about {
+.upcomingEvents__about {
   max-width: 338px;
   margin-bottom: 11px;
   font-size: 20px;
@@ -287,7 +292,7 @@
   line-height: 28px;
 }
 
-.upcoming-events__more {
+.upcomingEvents__more {
   position: relative;
   font-size: 16px;
   font-weight: 800;
@@ -311,14 +316,11 @@
   }
 }
 
-.upcoming-events__nav {
+.upcomingEvents__nav {
   position: absolute;
   top: 433px;
   left: 729px;
   z-index: 10;
-  display: flex;
-  gap: 0 58px;
-  align-items: center;
 
   @include r(1270px) {
     left: 520px;
@@ -342,20 +344,26 @@
   }
 }
 
-.upcoming-events__btn {
+.slider__navigation {
+  display: flex;
+  gap: 0 58px;
+  align-items: center;
+}
+
+.slide__prev,
+.slide__next {
   padding: 5px 0;
   transition: transform 0.2s ease-out;
-  cursor: pointer;
 
   span {
     display: block;
   }
 }
 
-.upcoming-events__prev:hover {
+.slide__prev:hover {
   transform: translateX(-3px);
 }
 
-.upcoming-events__next:hover {
+.slide__next:hover {
   transform: translateX(3px);
 }
