@@ -10,7 +10,7 @@
     "../images/intro/intro-bg.webp" type("image/png")
   );
 
-  @include md {
+  @include lg {
     background-image: url("../images/intro/intro-bg-1280.png");
     background-image: image-set(
       "../images/intro/intro-bg-1280.png" type("image/webp"),
@@ -43,7 +43,7 @@
     "inspiring line_first excellence line_second ."
     "about line_first . line_second scrolldown";
 
-  @include md {
+  @include lg {
     grid-template-columns: 1fr 1px 405px 1px 1fr;
     padding: 75px 70px 0;
   }

@@ -2,7 +2,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 10;
+  z-index: 1000;
   width: 100%;
   min-height: 75px;
   background-color: #090807;
@@ -37,7 +37,7 @@
   justify-content: space-between;
   align-items: center;
 
-  @include md {
+  @include lg {
     max-width: 1220px;
   }
 
