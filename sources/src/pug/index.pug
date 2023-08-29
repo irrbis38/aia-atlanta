@@ -32,7 +32,7 @@ block page
 
                 h2.upcomingEvents__title.block__title Upcoming Events
 
-                p.upcomingEvents__subtitle.block__subtitle Elevate your career and connections with continuing education, networking, and advocacy events.
+                p.upcomingEvents__subtitle Elevate your career and connections with continuing education, networking, and advocacy events.
 
             .upcomingEvents__slider
 
@@ -51,23 +51,44 @@ block page
 
     section.memberSpotlights
 
+        img.memberSpotlights__decor(src="./images/member-spotlights-decor.svg" alt="")
+
         .memberSpotlights__container
 
             .memberSpotlights__info
 
                 h2.memberSpotlights__title.block__title Member Spotlights
 
-                p.memberSpotlights__subtitle.block__subtitle Recognizing emerging and established talent in the architecture profession.
+                p.memberSpotlights__subtitle Recognizing emerging and established talent in the architecture profession.
 
             .memberSpotlights__slider 
 
-                .memberSpotlights__decor 
+                //- .memberSpotlights__decor 
 
-                .memberSpotlights__pictures 
+                .memberSpotlights__pictures
 
-                .memberSpotlights__wrapper 
+                    .memberSpotlights__pictures-wrapper
 
-                .memberSpotlights__descr
+                        .memberSpotlights__picture
+                            +picture('member-spotlights-1', 'png', 'x2')
+
+                        .memberSpotlights__picture
+                            +picture('member-spotlights-2', 'png', 'x2')
+
+                        .memberSpotlights__picture
+                            +picture('member-spotlights-3', 'png', 'x2')
+
+                .memberSpotlights__list
+
+                    .memberSpotlights__bg
+
+                    .memberSpotlights__descr
+
+                        h3.memberSpotlights__name Steve Hart, AIA
+
+                        p.memberSpotlights__about Steve Hart is a principal at HLGstudio. He received his Master of Architecture from the Georgia Institute of Technology and has worked for over 30 years in Atlanta.
+
+                        a.memberSpotlights__link.readmore__link(href="#") Read more
 
                 +slider__navigation('memberSpotlights__nav')
 
