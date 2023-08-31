@@ -1,5 +1,37 @@
 .latestNews {
+  position: relative;
   background-color: #000;
+  // overflow-x: hidden;
+
+  @include sm {
+    padding-bottom: 61px;
+  }
+}
+
+.latestNews__decor {
+  position: absolute;
+  left: -80px;
+  bottom: -290px;
+  width: 653px;
+  height: 550px;
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  @include lg {
+    left: -160px;
+  }
+
+  @include xs {
+    width: 368px;
+    height: 310px;
+    left: -85px;
+    bottom: -220px;
+  }
 }
 
 .latestNews__container {
@@ -175,8 +207,16 @@
 .latestNews__content {
   padding: 80px 40px 118px;
 
+  @include lg {
+    padding: 80px 40px 90px;
+  }
+
   @include sm {
     padding: 60px 0;
+  }
+
+  @include xxs {
+    padding: 60px 0 70px;
   }
 }
 
@@ -200,8 +240,20 @@
     height: 100%;
   }
 
+  @include lg {
+    &::after {
+      padding-top: 61.35%;
+    }
+  }
+
   @include sm {
     max-width: 500px;
+  }
+
+  @include xxs {
+    &::after {
+      padding-top: 55.56%;
+    }
   }
 }
 

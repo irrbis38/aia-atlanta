@@ -97,6 +97,9 @@ block page
 
 
     section.latestNews
+        .latestNews__decor
+            img(src="./images/latest-news-decor.svg" alt="")
+
         .latestNews__container
             .container
                 .latestNews__wrapper
@@ -125,13 +128,13 @@ block page
                             p.latestNews__about Knowledge Communities are recurring groups that allow members to discuss shared interests and exchange insights.
                             a.latestNews__link.readmore__link(href="#") read more
 
-                    .latestNews__item
-                        .latestNews__content
-                            .latestNews__img
-                                +picture('latest-news-3', 'png', 'x2')
-                            time.latestNews__published(datetime="2023-04-19") April 19, 2023
-                            p.latestNews__about Knowledge Communities are recurring groups that allow members to discuss shared interests and exchange insights.
-                            a.latestNews__link.readmore__link(href="#") read more
+                    //- .latestNews__item
+                    //-     .latestNews__content
+                    //-         .latestNews__img
+                    //-             +picture('latest-news-3', 'png', 'x2')
+                    //-         time.latestNews__published(datetime="2023-04-19") April 19, 2023
+                    //-         p.latestNews__about Knowledge Communities are recurring groups that allow members to discuss shared interests and exchange insights.
+                    //-         a.latestNews__link.readmore__link(href="#") read more
 
 
     section.joinOurChapter
@@ -139,25 +142,25 @@ block page
             .container
                 .joinOurChapter__wrapper 
                     .joinOurChapter__item
-                        h2.joinOurChapter__title.block__title Latest News
+                        h2.joinOurChapter__title.block__title Join Our Chapter
 
                     .joinOurChapter__item
-                        .joinOurChapter__content 
-                            a.joinOurChapter__link(href="#")
-                                svg.joinOurChapter__arrow(xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none")
-                                    path(d="M30.2843 1.71573L7.97717 7.6929L24.3071 24.0228L30.2843 1.71573ZM3.41421 31.4142L18.9706 15.8579L16.1421 13.0294L0.585786 28.5858L3.41421 31.4142Z" fill="#FE5C4F")
-                                span.joinOurChapter__text Become a member
+                        a.joinOurChapter__link(href="#")
+                            svg.joinOurChapter__arrow(xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none")
+                                path(d="M30.2843 1.71573L7.97717 7.6929L24.3071 24.0228L30.2843 1.71573ZM3.41421 31.4142L18.9706 15.8579L16.1421 13.0294L0.585786 28.5858L3.41421 31.4142Z" fill="#FE5C4F")
+                            span.joinOurChapter__text Become a member
 
-                            p.joinOurChapter__descr Join a communtiy designed to support your career, enhance your practice, and advance the profession. Find out which membership type is right for you.
+                        p.joinOurChapter__descr Join a communtiy designed to support your career, enhance your practice, and advance the profession. Find out which membership type is right for you.
+
 
                     .joinOurChapter__item
-                        .joinOurChapter__content 
-                            a.joinOurChapter__link(href="#")
-                                svg.joinOurChapter__arrow(xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none")
-                                    path(d="M30.2843 1.71573L7.97717 7.6929L24.3071 24.0228L30.2843 1.71573ZM3.41421 31.4142L18.9706 15.8579L16.1421 13.0294L0.585786 28.5858L3.41421 31.4142Z" fill="#FE5C4F")
-                                span.joinOurChapter__text Become a parton
+                        a.joinOurChapter__link(href="#")
+                            svg.joinOurChapter__arrow(xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none")
+                                path(d="M30.2843 1.71573L7.97717 7.6929L24.3071 24.0228L30.2843 1.71573ZM3.41421 31.4142L18.9706 15.8579L16.1421 13.0294L0.585786 28.5858L3.41421 31.4142Z" fill="#FE5C4F")
+                            span.joinOurChapter__text Become a parton
 
-                            p.joinOurChapter__descr Join a communtiy designed to support your career, enhance your practice, and advance the profession. Find out which membership type is right for you.
+                        p.joinOurChapter__descr Partner with AIA Atlanta as a leading architectural product or service provider to deliver value to members and advance their work.
+
 
 
 

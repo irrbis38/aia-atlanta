@@ -2,6 +2,10 @@
   position: relative;
   margin-bottom: 252px;
   overflow: hidden;
+
+  @include sm {
+    margin-bottom: 161px;
+  }
 }
 
 .memberSpotlights__decor {
@@ -64,7 +68,7 @@
   }
 
   @include xxs {
-    margin-right: 20px;
+    margin-left: 20px;
   }
 }
 
