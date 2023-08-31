@@ -128,13 +128,13 @@ block page
                             p.latestNews__about Knowledge Communities are recurring groups that allow members to discuss shared interests and exchange insights.
                             a.latestNews__link.readmore__link(href="#") read more
 
-                    //- .latestNews__item
-                    //-     .latestNews__content
-                    //-         .latestNews__img
-                    //-             +picture('latest-news-3', 'png', 'x2')
-                    //-         time.latestNews__published(datetime="2023-04-19") April 19, 2023
-                    //-         p.latestNews__about Knowledge Communities are recurring groups that allow members to discuss shared interests and exchange insights.
-                    //-         a.latestNews__link.readmore__link(href="#") read more
+                    .latestNews__item
+                        .latestNews__content
+                            .latestNews__img
+                                +picture('latest-news-3', 'png', 'x2')
+                            time.latestNews__published(datetime="2023-04-19") April 19, 2023
+                            p.latestNews__about Knowledge Communities are recurring groups that allow members to discuss shared interests and exchange insights.
+                            a.latestNews__link.readmore__link(href="#") read more
 
 
     section.joinOurChapter
@@ -160,6 +160,24 @@ block page
                             span.joinOurChapter__text Become a parton
 
                         p.joinOurChapter__descr Partner with AIA Atlanta as a leading architectural product or service provider to deliver value to members and advance their work.
+
+    section.subscribe
+        .container
+            h2.subscribe__title Sign up for out beewikly newsletter. Unsubscribe anytime.
+
+            form.subscribe__form(action="#")
+
+                .subscribe__wrapper
+
+                    label.subscribe__label 
+                        span First name
+                        input.subscribe__input(type="text")
+
+                    label.subscribe__label
+                        span Email
+                        input.subscribe__input(type="text")
+
+                +button('button', 'subscribe__submit', 'btn-red', 'Submit')
 
 
 

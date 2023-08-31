@@ -1,0 +1,93 @@
+.subscribe {
+  padding: 120px 0;
+  background-color: #000;
+
+  .container {
+    padding: 0 70px;
+  }
+
+  @include sm {
+    padding: 100px 0;
+
+    .container {
+      padding: 0 40px;
+    }
+  }
+
+  @include xxs {
+    .container {
+      padding: 0 20px;
+    }
+  }
+}
+
+.subscribe__title {
+  margin-bottom: 40px;
+  color: var(--color_white, #fff);
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 28px;
+
+  @include sm {
+    margin-bottom: 32px;
+  }
+}
+
+.subscribe__form {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: flex-end;
+  gap: 0 94px;
+
+  @include sm {
+    display: block;
+  }
+}
+
+.subscribe__wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0 20px;
+
+  @include sm {
+    display: block;
+    margin-bottom: 61px;
+  }
+}
+
+.subscribe__label {
+  display: block;
+
+  span {
+    padding-left: 24px;
+    color: var(--color_white, #fff);
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 32px;
+    text-transform: uppercase;
+  }
+
+  @include sm {
+    width: 100%;
+    max-width: 550px;
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.subscribe__input {
+  display: block;
+  width: 100%;
+  min-height: 48px;
+  padding: 0 15px;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 28px;
+  color: #000;
+  background-color: #fff;
+}
+
+.subscribe__submit {
+  font-size: 16px;
+}
