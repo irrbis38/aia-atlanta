@@ -96,6 +96,44 @@ block page
                 +slider__navigation('memberSpotlights__nav')
 
 
+    section.latestNews
+        .latestNews__container
+            .container
+                .latestNews__wrapper
+
+                    .latestNews__item
+                        h2.latestNews__title.block__title Latest News
+
+                    .latestNews__item
+                        +button('link', 'latestNews__showAll', 'btn-red', 'All News')
+
+                    .latestNews__item
+
+                    .latestNews__item
+                        .latestNews__content
+                            +picture('latest-news-1', 'png', 'x2')
+                            time.latestNews__published(datetime="2023-04-19") April 19, 2023
+                            p.latestNews__about Knowledge Communities are recurring groups that allow members to discuss shared interests and exchange insights.
+                            a.latestNews__link.readmore__link(href="#") read more
+
+                    .latestNews__item
+                        .latestNews__content
+                            +picture('latest-news-2', 'png', 'x2')
+                            time.latestNews__published(datetime="2023-04-19") April 19, 2023
+                            p.latestNews__about Knowledge Communities are recurring groups that allow members to discuss shared interests and exchange insights.
+                            a.latestNews__link.readmore__link(href="#") read more
+
+                    .latestNews__item
+                        .latestNews__content
+                            +picture('latest-news-3', 'png', 'x2')
+                            time.latestNews__published(datetime="2023-04-19") April 19, 2023
+                            p.latestNews__about Knowledge Communities are recurring groups that allow members to discuss shared interests and exchange insights.
+                            a.latestNews__link.readmore__link(href="#") read more
+
+
+
+
+
 
 
 

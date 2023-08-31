@@ -1,6 +1,6 @@
 .memberSpotlights {
   position: relative;
-  margin-bottom: 258px;
+  margin-bottom: 252px;
   overflow: hidden;
 }
 
@@ -60,7 +60,11 @@
 
   @include xs {
     margin-bottom: 40px;
-    margin-left: 20px;
+    margin-left: 40px;
+  }
+
+  @include xxs {
+    margin-right: 20px;
   }
 }
 
@@ -189,12 +193,12 @@
   }
 
   @include sm {
-    padding: 10px 20px 162px 20px;
+    padding: 10px 20px 162px 40px;
     background-color: var(--color_azure, #007d8a);
   }
 
   @include xs {
-    padding: 60px 20px 162px 20px;
+    padding: 60px 20px 162px 40px;
   }
 
   @include xxs {
@@ -275,7 +279,11 @@
   }
 
   @include sm {
-    left: 20px;
+    left: 40px;
     bottom: 69px;
+  }
+
+  @include xxs {
+    left: 20px;
   }
 }

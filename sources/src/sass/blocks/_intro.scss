@@ -202,7 +202,8 @@
 }
 
 .intro__line-second {
-  grid-area: line_second;
+  // grid-area: line_second;
+  // background: linear-gradient(0, #fff 0%, rgba(255, 255, 255, 0) 100%);
   background: linear-gradient(0, #fff 0%, rgba(255, 255, 255, 0) 100%);
 
   @include sm {
