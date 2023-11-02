@@ -127,17 +127,19 @@
   }
 }
 
-.joinOurChapter__link:hover {
-  .joinOurChapter__arrow {
-    transform: rotate(45deg);
+@media (hover: hover) {
+  .joinOurChapter__link:hover {
+    .joinOurChapter__arrow {
+      transform: rotate(45deg);
 
-    path {
-      fill: #fff;
+      path {
+        fill: #fff;
+      }
     }
-  }
 
-  .joinOurChapter__text {
-    color: var(--color_white, #fff);
+    .joinOurChapter__text {
+      color: var(--color_white, #fff);
+    }
   }
 }
 

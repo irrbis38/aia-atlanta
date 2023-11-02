@@ -343,12 +343,14 @@
   }
 }
 
-.slide__prev:hover {
-  transform: translateX(-3px);
-}
+@media (hover: hover) {
+  .slide__prev:hover {
+    transform: translateX(-3px);
+  }
 
-.slide__next:hover {
-  transform: translateX(3px);
+  .slide__next:hover {
+    transform: translateX(3px);
+  }
 }
 
 .upcomingEvents__showAll {

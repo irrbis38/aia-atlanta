@@ -111,8 +111,10 @@
     text-transform: uppercase;
     transition: color 0.2s ease-out;
 
-    &:hover {
-      color: var(--color_red, #fa4132);
+    @media (hover: hover) {
+      &:hover {
+        color: var(--color_red, #fa4132);
+      }
     }
   }
 
@@ -200,13 +202,15 @@
     transform-origin: right center;
   }
 
-  &:hover {
-    span {
-      width: 100%;
-    }
+  @media (hover: hover) {
+    &:hover {
+      span {
+        width: 100%;
+      }
 
-    &::before {
-      width: 100%;
+      &::before {
+        width: 100%;
+      }
     }
   }
 

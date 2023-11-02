@@ -108,8 +108,10 @@
     text-transform: uppercase;
     transition: color 0.2s ease-out;
 
-    &:hover {
-      color: var(--color_red, #fa4132);
+    @media (hover: hover) {
+      &:hover {
+        color: var(--color_red, #fa4132);
+      }
     }
   }
 
@@ -200,8 +202,10 @@
     }
   }
 
-  a:hover {
-    transform: scale(1.1);
+  @media (hover: hover) {
+    a:hover {
+      transform: scale(1.1);
+    }
   }
 }
 

@@ -123,9 +123,11 @@ button {
     transition: all 0.2s ease-out;
   }
 
-  &:hover {
-    svg {
-      transform: rotate(45deg);
+  @media (hover: hover) {
+    &:hover {
+      svg {
+        transform: rotate(45deg);
+      }
     }
   }
 
@@ -135,7 +137,7 @@ button {
   }
 }
 
-.btn-red {
+.btn-red-to-white {
   background-color: var(--color_red, #fa4132);
   color: var(--color_white, #fff);
 
@@ -143,51 +145,119 @@ button {
     fill: var(--color_white, #fff);
   }
 
-  &:hover {
-    background-color: var(--color_white, #fff);
-    color: var(--color_red, #fa4132);
+  @media (hover: hover) {
+    &:hover {
+      background-color: var(--color_white, #fff);
+      color: var(--color_red, #fa4132);
 
-    path {
-      fill: var(--color_red, #fa4132);
+      path {
+        fill: var(--color_red, #fa4132);
+      }
     }
   }
 }
 
-.btn-white {
-  background-color: var(--color_white, #fff);
-  color: var(--color_red, #fa4132);
-
-  path {
-    fill: var(--color_red, #fa4132);
-  }
-
-  &:hover {
-    background-color: var(--color_red, #fa4132);
-    color: var(--color_white, #fff);
-
-    path {
-      fill: var(--color_white, #fff);
-    }
-  }
-}
-
-.btn-black {
-  background-color: var(--color_black, #000);
+.btn-red-to-black {
+  background-color: var(--color_red, #fa4132);
   color: var(--color_white, #fff);
 
   path {
     fill: var(--color_white, #fff);
   }
 
-  &:hover {
-    background-color: var(--color_white, #fff);
-    color: var(--color_black, #000);
+  @media (hover: hover) {
+    &:hover {
+      background-color: var(--color_black, #000);
+      color: var(--color_white, #fff);
 
-    path {
-      fill: var(--color_black, #000);
+      path {
+        fill: var(--color_white, #fff);
+      }
     }
   }
 }
+
+// .btn-white-to-red {
+//   background-color: var(--color_white, #fff);
+//   color: var(--color_red, #fa4132);
+
+//   path {
+//     fill: var(--color_red, #fa4132);
+//   }
+
+//   @media (hover: hover) {
+//     &:hover {
+//       background-color: var(--color_red, #fa4132);
+//       color: var(--color_white, #fff);
+
+//       path {
+//         fill: var(--color_white, #fff);
+//       }
+//     }
+//   }
+// }
+
+.btn-transparent-to-white {
+  background-color: transparent;
+  color: var(--color_white, #fff);
+  border: 2px solid var(--color_white, #fff);
+
+  path {
+    fill: var(--color_white, #fff);
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: var(--color_white, #fff);
+      color: var(--color_red, #fa4132);
+
+      path {
+        fill: var(--color_red, #fa4132);
+      }
+    }
+  }
+}
+
+.btn-white-to-black {
+  background-color: var(--color_white, #fff);
+  color: var(--color_red, #fa4132);
+  border: 2px solid var(--color_white, #fff);
+
+  path {
+    fill: var(--color_red, #fa4132);
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: var(--color_black, #000);
+      color: var(--color_white, #fff);
+
+      path {
+        fill: var(--color_white, #fff);
+      }
+    }
+  }
+}
+
+// .btn-black {
+//   background-color: var(--color_black, #000);
+//   color: var(--color_white, #fff);
+
+//   path {
+//     fill: var(--color_white, #fff);
+//   }
+
+//   @media (hover: hover) {
+//     &:hover {
+//       background-color: var(--color_white, #fff);
+//       color: var(--color_black, #000);
+
+//       path {
+//         fill: var(--color_black, #000);
+//       }
+//     }
+//   }
+// }
 
 .block__title {
   font-size: 52px;
@@ -222,7 +292,9 @@ button {
     transition: opacity 0.2s ease-out;
   }
 
-  &:hover::after {
-    opacity: 1;
+  @media (hover: hover) {
+    &:hover::after {
+      opacity: 1;
+    }
   }
 }
