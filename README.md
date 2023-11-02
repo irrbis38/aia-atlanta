@@ -6,7 +6,6 @@
 - SCSS
 - JS
 - GSAP
-- Swiper slider
 
 ## Pages:
 - [Main](https://irrbis38.github.io/aia-atlanta/)

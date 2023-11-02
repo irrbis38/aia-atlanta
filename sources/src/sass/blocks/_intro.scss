@@ -1,29 +1,40 @@
 .intro {
+  position: relative;
   width: 100%;
   min-width: 320px;
   overflow: hidden;
-  background-color: #000;
-  background: center / cover no-repeat;
-  background-image: url("../images/intro/intro-bg.png");
-  background-image: image-set(
-    "../images/intro/intro-bg.png" type("image/webp"),
-    "../images/intro/intro-bg.webp" type("image/png")
-  );
 
-  @include lg {
-    background-image: url("../images/intro/intro-bg-1280.png");
-    background-image: image-set(
-      "../images/intro/intro-bg-1280.png" type("image/webp"),
-      "../images/intro/intro-bg-1280.webp" type("image/png")
-    );
-  }
+  .intro__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
 
-  @include xxs {
-    background-image: url("../images/intro/intro-bg-400.png");
+    background-color: #000;
+    background: center / cover no-repeat;
+    background-image: url("../images/intro/intro-bg.png");
     background-image: image-set(
-      "../images/intro/intro-bg-400.png" type("image/webp"),
-      "../images/intro/intro-bg-400.webp" type("image/png")
+      "../images/intro/intro-bg.png" type("image/webp"),
+      "../images/intro/intro-bg.webp" type("image/png")
     );
+
+    @include lg {
+      background-image: url("../images/intro/intro-bg-1280.png");
+      background-image: image-set(
+        "../images/intro/intro-bg-1280.png" type("image/webp"),
+        "../images/intro/intro-bg-1280.webp" type("image/png")
+      );
+    }
+
+    @include xxs {
+      background-image: url("../images/intro/intro-bg-400.png");
+      background-image: image-set(
+        "../images/intro/intro-bg-400.png" type("image/webp"),
+        "../images/intro/intro-bg-400.webp" type("image/png")
+      );
+    }
   }
 }
 
