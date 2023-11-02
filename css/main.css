@@ -338,9 +338,11 @@ button {
 .btn svg {
   transition: all .2s ease-out
 }
-.btn:hover svg {
-  -webkit-transform: rotate(45deg);
-  transform: rotate(45deg)
+@media (hover:hover) {
+  .btn:hover svg {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg)
+  }
 }
 @media only screen and (max-width:1199px) {
   .btn {
@@ -348,47 +350,71 @@ button {
     font-size: 16px
   }
 }
-.btn-red {
+.btn-red-to-white {
   background-color: var(--color_red,#fa4132);
   color: var(--color_white,#fff)
 }
-.btn-red path {
+.btn-red-to-white path {
   fill: var(--color_white,#fff)
 }
-.btn-red:hover {
-  background-color: var(--color_white,#fff);
-  color: var(--color_red,#fa4132)
+@media (hover:hover) {
+  .btn-red-to-white:hover {
+    background-color: var(--color_white,#fff);
+    color: var(--color_red,#fa4132)
+  }
+  .btn-red-to-white:hover path {
+    fill: var(--color_red,#fa4132)
+  }
 }
-.btn-red:hover path {
-  fill: var(--color_red,#fa4132)
-}
-.btn-white {
-  background-color: var(--color_white,#fff);
-  color: var(--color_red,#fa4132)
-}
-.btn-white path {
-  fill: var(--color_red,#fa4132)
-}
-.btn-white:hover {
+.btn-red-to-black {
   background-color: var(--color_red,#fa4132);
   color: var(--color_white,#fff)
 }
-.btn-white:hover path {
+.btn-red-to-black path {
   fill: var(--color_white,#fff)
 }
-.btn-black {
-  background-color: var(--color_black,#000);
-  color: var(--color_white,#fff)
+@media (hover:hover) {
+  .btn-red-to-black:hover {
+    background-color: var(--color_black,#000);
+    color: var(--color_white,#fff)
+  }
+  .btn-red-to-black:hover path {
+    fill: var(--color_white,#fff)
+  }
 }
-.btn-black path {
+.btn-transparent-to-white {
+  background-color: transparent;
+  color: var(--color_white,#fff);
+  border: 2px solid var(--color_white,#fff)
+}
+.btn-transparent-to-white path {
   fill: var(--color_white,#fff)
 }
-.btn-black:hover {
+@media (hover:hover) {
+  .btn-transparent-to-white:hover {
+    background-color: var(--color_white,#fff);
+    color: var(--color_red,#fa4132)
+  }
+  .btn-transparent-to-white:hover path {
+    fill: var(--color_red,#fa4132)
+  }
+}
+.btn-white-to-black {
   background-color: var(--color_white,#fff);
-  color: var(--color_black,#000)
+  color: var(--color_red,#fa4132);
+  border: 2px solid var(--color_white,#fff)
 }
-.btn-black:hover path {
-  fill: var(--color_black,#000)
+.btn-white-to-black path {
+  fill: var(--color_red,#fa4132)
+}
+@media (hover:hover) {
+  .btn-white-to-black:hover {
+    background-color: var(--color_black,#000);
+    color: var(--color_white,#fff)
+  }
+  .btn-white-to-black:hover path {
+    fill: var(--color_white,#fff)
+  }
 }
 .block__title {
   font-size: 52px;
@@ -423,8 +449,10 @@ button {
   opacity: 0;
   transition: opacity .2s ease-out
 }
-.readmore__link:hover::after {
-  opacity: 1
+@media (hover:hover) {
+  .readmore__link:hover::after {
+    opacity: 1
+  }
 }
 .header {
   position: fixed;
@@ -557,8 +585,10 @@ button {
   text-transform: uppercase;
   transition: color .2s ease-out
 }
-.header__nav li:hover {
-  color: var(--color_red,#fa4132)
+@media (hover:hover) {
+  .header__nav li:hover {
+    color: var(--color_red,#fa4132)
+  }
 }
 @media only screen and (max-width:1199px) {
   .header__nav {
@@ -642,11 +672,13 @@ button {
   -webkit-transform-origin: right center;
   transform-origin: right center
 }
-.header__burger:hover span {
-  width: 100%
-}
-.header__burger:hover::before {
-  width: 100%
+@media (hover:hover) {
+  .header__burger:hover span {
+    width: 100%
+  }
+  .header__burger:hover::before {
+    width: 100%
+  }
 }
 .header__burger.active span {
   opacity: 0
@@ -676,9 +708,18 @@ button {
   flex-grow: 1
 }
 .intro {
+  position: relative;
   width: 100%;
   min-width: 320px;
-  overflow: hidden;
+  overflow: hidden
+}
+.intro .intro__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
   background-color: #000;
   background: center/cover no-repeat;
   background-image: url(../images/intro/intro-bg.png);
@@ -686,14 +727,14 @@ button {
   background-image: image-set("../images/intro/intro-bg.png" type("image/webp"), "../images/intro/intro-bg.webp" type("image/png"))
 }
 @media (max-width:1299px) {
-  .intro {
+  .intro .intro__bg {
     background-image: url(../images/intro/intro-bg-1280.png);
     background-image: -webkit-image-set("../images/intro/intro-bg-1280.png" type("image/webp"), "../images/intro/intro-bg-1280.webp" type("image/png"));
     background-image: image-set("../images/intro/intro-bg-1280.png" type("image/webp"), "../images/intro/intro-bg-1280.webp" type("image/png"))
   }
 }
 @media (max-width:575px) {
-  .intro {
+  .intro .intro__bg {
     background-image: url(../images/intro/intro-bg-400.png);
     background-image: -webkit-image-set("../images/intro/intro-bg-400.png" type("image/webp"), "../images/intro/intro-bg-400.webp" type("image/png"));
     background-image: image-set("../images/intro/intro-bg-400.png" type("image/webp"), "../images/intro/intro-bg-400.webp" type("image/png"))
@@ -865,7 +906,7 @@ button {
 }
 .intro__line-first {
   grid-area: line_first;
-  background: linear-gradient(0,#fff 0,rgba(255,255,255,0) 100%)
+  background: linear-gradient(0,#fff 0,#fff 50%,rgba(255,255,255,0) 100%)
 }
 @media (max-width:991px) {
   .intro__line-first {
@@ -873,7 +914,8 @@ button {
   }
 }
 .intro__line-second {
-  background: linear-gradient(0,#fff 0,rgba(255,255,255,0) 100%)
+  grid-area: line_second;
+  background: linear-gradient(0,#fff 0,#fff 50%,rgba(255,255,255,0) 100%)
 }
 @media (max-width:991px) {
   .intro__line-second {
@@ -1241,13 +1283,15 @@ button {
 .slide__prev span {
   display: block
 }
-.slide__prev:hover {
-  -webkit-transform: translateX(-3px);
-  transform: translateX(-3px)
-}
-.slide__next:hover {
-  -webkit-transform: translateX(3px);
-  transform: translateX(3px)
+@media (hover:hover) {
+  .slide__prev:hover {
+    -webkit-transform: translateX(-3px);
+    transform: translateX(-3px)
+  }
+  .slide__next:hover {
+    -webkit-transform: translateX(3px);
+    transform: translateX(3px)
+  }
 }
 .upcomingEvents__showAll {
   margin: 80px 0 0 auto
@@ -1909,15 +1953,17 @@ button {
     max-width: max-content
   }
 }
-.joinOurChapter__link:hover .joinOurChapter__arrow {
-  -webkit-transform: rotate(45deg);
-  transform: rotate(45deg)
-}
-.joinOurChapter__link:hover .joinOurChapter__arrow path {
-  fill: #fff
-}
-.joinOurChapter__link:hover .joinOurChapter__text {
-  color: var(--color_white,#fff)
+@media (hover:hover) {
+  .joinOurChapter__link:hover .joinOurChapter__arrow {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg)
+  }
+  .joinOurChapter__link:hover .joinOurChapter__arrow path {
+    fill: #fff
+  }
+  .joinOurChapter__link:hover .joinOurChapter__text {
+    color: var(--color_white,#fff)
+  }
 }
 .joinOurChapter__arrow,
 .joinOurChapter__arrow path,
@@ -2132,8 +2178,10 @@ button {
   text-transform: uppercase;
   transition: color .2s ease-out
 }
-.footer__nav a:hover {
-  color: var(--color_red,#fa4132)
+@media (hover:hover) {
+  .footer__nav a:hover {
+    color: var(--color_red,#fa4132)
+  }
 }
 @media only screen and (max-width:1270px) {
   .footer__nav {
@@ -2240,9 +2288,11 @@ button {
     margin-bottom: 45px
   }
 }
-.footer__social a:hover {
-  -webkit-transform: scale(1.1);
-  transform: scale(1.1)
+@media (hover:hover) {
+  .footer__social a:hover {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1)
+  }
 }
 .footer__poweredBy {
   padding-right: 78px;
