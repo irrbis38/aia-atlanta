@@ -166,17 +166,22 @@ block page
         .container
             h2.subscribe__title Sign up for out beewikly newsletter. Unsubscribe anytime.
 
-            form.subscribe__form(action="#")
+            form.subscribe__form(action="#" novalidate)
 
                 .subscribe__wrapper
 
-                    label.subscribe__label 
-                        span First name
-                        input.subscribe__input(type="text")
+                    label.input__label
+                        span.input__name First name
+                        span.input__item
+                            input.input(type="text")
+                            span.input__error *error message
 
-                    label.subscribe__label
-                        span Email
-                        input.subscribe__input(type="text")
+                    label.input__label
+                        span.input__name Email
+                        span.input__item
+                            input.input(type="email" required)
+                            span.input__error *error message
+
 
                 +button('button', 'subscribe__submit', 'btn-red-to-white', 'Submit')
 
