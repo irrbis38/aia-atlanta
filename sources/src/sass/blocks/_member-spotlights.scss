@@ -151,14 +151,16 @@
 
   &:nth-child(2) {
     z-index: 2;
-    top: 36px;
-    left: 32px;
+    transform: translate(32px, 36px);
+    // top: 36px;
+    // left: 32px;
   }
 
   &:nth-child(3) {
     z-index: 1;
-    top: 62px;
-    left: 59px;
+    transform: translate(59px, 62px);
+    // top: 62px;
+    // left: 59px;
   }
 
   img {
@@ -170,18 +172,21 @@
 
   @include sm {
     &:nth-child(2) {
-      top: 27px;
-      left: unset;
-      right: 20px;
+      transform: translate(-20px, 27px);
+      // top: 27px;
+      // left: unset;
+      // right: 20px;
     }
 
     &:nth-child(3) {
-      top: 48px;
-      left: 0;
+      transform: translate(0, 48px);
+      // top: 48px;
+      // left: 0;
     }
 
     &:nth-child(1) {
-      right: 45px;
+      transform: translate(-45px, 0);
+      // right: 45px;
     }
   }
 }
